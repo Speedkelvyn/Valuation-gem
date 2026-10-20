@@ -1,5 +1,7 @@
 # The Valuation Ledger
 
+[![CI](https://github.com/Speedkelvyn/Valuation-gem/actions/workflows/ci.yml/badge.svg)](https://github.com/Speedkelvyn/Valuation-gem/actions/workflows/ci.yml)
+
 A complete, interactive course in valuing companies, in one page, with worked examples, calculators and self-tests throughout.
 
 **Read the course:** https://speedkelvyn.github.io/Valuation-gem/
@@ -40,3 +42,14 @@ Open `index.html` in a browser, or use the live link above.
 
 ## Related
 Applied valuations built with the same methods (Dell Technologies and Sandisk) are on the [portfolio site](https://speedkelvyn.github.io/Speedy.github.io/#valuations).
+
+## Development
+
+```bash
+pip install ruff pytest
+ruff check . && ruff format --check .   # lint and formatting
+pytest -q                               # tests
+npx html-validate@8.24.1 *.html         # HTML validation
+```
+
+Style is set by `ruff.toml`, `.prettierrc.json`, `.htmlvalidate.json` and `.editorconfig`; GitHub Actions runs the same checks on every push.

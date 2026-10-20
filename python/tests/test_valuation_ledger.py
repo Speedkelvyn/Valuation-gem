@@ -1,4 +1,5 @@
 """Each function must give the same answer as the course page's calculator (page defaults)."""
+
 import math
 import pathlib
 import sys
@@ -6,7 +7,7 @@ import sys
 import pytest
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
-import valuation_ledger as L  # noqa: E402
+import valuation_ledger as L
 
 
 def test_present_value():  # page: $79.38, $78.66, $1,666.67
