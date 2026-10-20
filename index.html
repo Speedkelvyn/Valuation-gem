@@ -474,7 +474,7 @@ section.chapter,.partbreak{opacity:1 !important;transform:none !important;}
   <p class="lede">This book takes one question — <strong>what is a company actually worth?</strong> — and builds every tool needed to answer it, from scratch. No step is skipped, no formula appears without a plain-English reason for existing, and one example company is valued end-to-end across all forty-four chapters.</p>
   <button id="resumebtn" class="go" hidden style="margin:18px 0 4px">▶ Continue where you left off</button>
   <div class="modeltools">
-    <a id="workbookbtn" class="workbookbtn" href="valuation-models-dcf-ddm.xlsx" target="_blank" rel="noopener noreferrer" aria-label="Open valuation workbook for DCF and DDM">
+    <a id="workbookbtn" class="workbookbtn" href="workbooks/valuation-models-dcf-ddm.xlsx" target="_blank" rel="noopener noreferrer" aria-label="Open valuation workbook for DCF and DDM">
       <span>Open valuation workbook</span>
       <span class="mini">DCF + DDM Excel model</span>
     </a>
@@ -3071,7 +3071,7 @@ safe(function(){
 
 /* ================= valuation workbook launcher ================= */
 window.ledgerOpenWorkbook=function(){
-  var url='valuation-models-dcf-ddm.xlsx';
+  var url='workbooks/valuation-models-dcf-ddm.xlsx';
   try{
     var a=document.createElement('a');
     a.href=url;
