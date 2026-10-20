@@ -24,6 +24,17 @@ Eight parts and more than 40 chapters, from first principles to a full valuation
 - Formulas typeset with KaTeX
 - A companion Excel workbook with DCF and DDM model sheets: [`workbooks/valuation-models-dcf-ddm.xlsx`](workbooks/valuation-models-dcf-ddm.xlsx)
 
+## Python version
+[`python/valuation_ledger.py`](python/valuation_ledger.py) has every calculator in the course as a Python function, with the same formulas and default inputs, so results match the page:
+
+```bash
+python python/valuation_ledger.py                 # run all calculators with the course defaults
+python python/valuation_ledger.py npv --cash-flows 3000,4000,4000,3500 --rate 10
+python python/valuation_ledger.py bs --spot 40 --strike 45 --vol 30
+```
+
+Covers present value, NPV/IRR, dividend discount models, the efficient frontier, beta by OLS, CAPM, VaR and expected shortfall, bond price and duration, WACC, option payoffs, Black-Scholes, disciplined terminal value, Monte Carlo and GBM paths. Standard library only; tests in `python/tests` check each function against the page's outputs.
+
 ## Run it
 Open `index.html` in a browser, or use the live link above.
 

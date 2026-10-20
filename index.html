@@ -2546,7 +2546,7 @@ function calcB(){
 function calcV(){
   var W=num('cVw'),s=num('cVs')/100,c=num('cVc')/100;
   if(c<=0.5||c>=1){document.getElementById('cVout').textContent='Confidence between 50 and 100.';return;}
-  function ppf(p){var a=[-39.6968,220.946,-275.928,138.358,-30.6648,2.50662],b=[-54.4761,161.586,-155.699,66.8013,-13.2807],c2=[-0.00778489,-0.322396,-2.40076,-2.54973,4.37466,2.93816],d=[0.00778469,0.32246,2.44514,3.75441];var q,r;if(p<0.02425){q=Math.sqrt(-2*Math.log(p));return (((((c2[0]*q+c2[1])*q+c2[2])*q+c2[3])*q+c2[4])*q+c2[5])/((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1)}if(p>0.97575){q=Math.sqrt(-2*Math.log(1-p));return -(((((c2[0]*q+c2[1])*q+c2[2])*q+c2[3])*q+c2[4])*q+c2[5])/((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1)}q=p-0.5;r=q*q;return (((((a[0]*r+a[1])*r+a[2])*r+a[3])*r+a[4])*r+a[5])*q/(((((b[0]*r+b[1])*r+b[2])*r+b[3])*r+b[4])*r+1)}
+  function ppf(p){var a=[-39.69683028665376,220.9460984245205,-275.9285104469687,138.3577518672690,-30.66479806614716,2.506628277459239],b=[-54.47609879822406,161.5858368580409,-155.6989798598866,66.80131188771972,-13.28068155288572],c2=[-0.007784894002430293,-0.3223964580411365,-2.400758277161838,-2.549732539343734,4.374664141464968,2.938163982698783],d=[0.007784695709041462,0.3224671290700398,2.445134137142996,3.754408661907416];var q,r;if(p<0.02425){q=Math.sqrt(-2*Math.log(p));return (((((c2[0]*q+c2[1])*q+c2[2])*q+c2[3])*q+c2[4])*q+c2[5])/((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1)}if(p>0.97575){q=Math.sqrt(-2*Math.log(1-p));return -(((((c2[0]*q+c2[1])*q+c2[2])*q+c2[3])*q+c2[4])*q+c2[5])/((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1)}q=p-0.5;r=q*q;return (((((a[0]*r+a[1])*r+a[2])*r+a[3])*r+a[4])*r+a[5])*q/(((((b[0]*r+b[1])*r+b[2])*r+b[3])*r+b[4])*r+1)}
   var z=ppf(c),p=1-c;
   var varv=z*s*W;
   var es=(Math.exp(-z*z/2)/Math.sqrt(2*Math.PI))/p*s*W;
@@ -3097,6 +3097,7 @@ document.addEventListener('DOMContentLoaded',function(){
   }
   tryRender();
 });
-</script>t>
+</script>
+<p class="py-version" style="text-align:center;font:13px/1.5 system-ui,-apple-system,sans-serif;opacity:.75;margin:32px 16px 96px">Every calculator in this course is also available in Python: <a href="https://github.com/Speedkelvyn/Valuation-gem/blob/main/python/valuation_ledger.py" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">python/valuation_ledger.py</a></p>
 </body>
 </html>
